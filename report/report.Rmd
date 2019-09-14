@@ -1,0 +1,45 @@
+---
+title: "Open Data Gov"
+author: "Hakje team 209"
+date: '`r paste("Date: ",Sys.Date())`'
+output: 
+      rmdformats::readthedown:
+            fig_width: 12
+            fig_height: 8
+            highlight: tango
+            lightbox: TRUE
+            thumbnails: FALSE
+            gallery: TRUE
+            use_bookdown: TRUE
+            toc_depth: 3
+            code_folding: hide
+---
+
+```{r, include = FALSE}
+require(dplyr)
+options(stringsAsFactors = F)
+knitr::opts_knit$set(root.dir = "/home/iga_niemiec/Pulpit/hakje/data-gov-monitor/")
+```
+
+```{r, include = FALSE}
+# load input files
+#data <- read.csv("./data_gov.csv", header = T)
+gov_logo_path <- "./main_logo.png"
+```
+
+
+# Kategorie danych
+
+## 1 wykres
+
+## 2 wykres
+
+```{r, include = TRUE}
+hist(c(1, 2, 3))
+```
+
+
+
+# Kategorie użytkowników
+
+# cokolwiek jeszcze
