@@ -1,0 +1,192 @@
+{
+    "213.180.141.140": {
+        "city": "Kielce",
+        "country": "Poland",
+        "isp": "Ringier Axel Springer Polska Sp. z o.o.",
+        "lat": 50.8661,
+        "lon": 20.6286,
+        "org": "Grupa Onet.pl SA - Anycast Services",
+        "reverse": "sg1.any.onet.pl",
+        "zip": "25-011"
+    },
+    "149.156.96.52": {
+        "city": "Krakow",
+        "country": "Poland",
+        "isp": "Academic Computer Centre CYFRONET AGH",
+        "lat": 50.0646,
+        "lon": 19.9168,
+        "org": "Academic Computer Centre CYFRONET AGH",
+        "reverse": "www.agh.edu.pl",
+        "zip": "30-059"
+    },
+    "149.156.132.5": {
+        "city": "Krakow",
+        "country": "Poland",
+        "isp": "Academic Computer Centre CYFRONET AGH",
+        "lat": 50.069,
+        "lon": 19.9092,
+        "org": "Academic Computer Centre CYFRONET AGH",
+        "reverse": "pk.edu.pl",
+        "zip": "30-056"
+    },
+    "5.134.213.82": {
+        "city": "Poznan",
+        "country": "Poland",
+        "isp": "Grupa Allegro Sp. z o.o.",
+        "lat": 52.3918,
+        "lon": 16.8575,
+        "org": "Grupa Allegro Sp. z o.o.",
+        "reverse": "",
+        "zip": "60-166"
+    },
+    "193.109.245.227": {
+        "city": "Warsaw",
+        "country": "Poland",
+        "isp": "PZU Centrum Operacji S.A.",
+        "lat": 52.1366,
+        "lon": 21.0588,
+        "org": "PZU Centrum Operacji S.A",
+        "reverse": "",
+        "zip": "02-793"
+    },
+    "46.229.156.141": {
+        "city": "Sopot",
+        "country": "Poland",
+        "isp": "ATM S.A.",
+        "lat": 54.446,
+        "lon": 18.5689,
+        "org": "Blue Services",
+        "reverse": "rev-46.229.156.141.blueservices.pl",
+        "zip": "81-756"
+    },
+    "66.135.195.175": {
+        "city": "San Jose",
+        "country": "United States",
+        "isp": "eBay, Inc",
+        "lat": 37.2951,
+        "lon": -121.93,
+        "org": "eBay, Inc",
+        "reverse": "ru.ebay.com",
+        "zip": "95128"
+    },
+    "185.60.216.35": {
+        "city": "Frankfurt am Main",
+        "country": "Germany",
+        "isp": "Facebook, Inc.",
+        "lat": 50.1109,
+        "lon": 8.68213,
+        "org": "Facebook Ireland Ltd",
+        "reverse": "edge-star-mini-shv-01-frx5.facebook.com",
+        "zip": "60313"
+    },
+    "108.174.10.10": {
+        "city": "Chicago",
+        "country": "United States",
+        "isp": "LinkedIn Corporation",
+        "lat": 41.8781,
+        "lon": -87.6298,
+        "org": "LinkedIn Corporation",
+        "reverse": "108-174-10-10.fwd.linkedin.com",
+        "zip": "60666"
+    },
+    "104.25.238.12": {
+        "city": "Ashburn",
+        "country": "United States",
+        "isp": "Cloudflare, Inc.",
+        "lat": 39.0438,
+        "lon": -77.4874,
+        "org": "Cloudflare, Inc.",
+        "reverse": "",
+        "zip": "20149"
+    },
+    "94.23.242.48": {
+        "city": "Roubaix",
+        "country": "France",
+        "isp": "OVH ISP",
+        "lat": 50.6917,
+        "lon": 3.20014,
+        "org": "OVH SAS",
+        "reverse": "tools.wikimedia.pl",
+        "zip": "59100"
+    },
+    "146.177.17.42": {
+        "city": "London",
+        "country": "United Kingdom",
+        "isp": "Rackspace Ltd.",
+        "lat": 51.5074,
+        "lon": -0.127758,
+        "org": "Rspc UK the Cochrane Collaboration",
+        "reverse": "cochrane.org",
+        "zip": "W1B"
+    },
+    "81.168.254.126": {
+        "city": "Poznan",
+        "country": "Poland",
+        "isp": "PGF-DIALOG",
+        "lat": 52.4064,
+        "lon": 16.9252,
+        "org": "Pelion SA",
+        "reverse": "",
+        "zip": "61-829"
+    },
+    "52.232.42.205": {
+        "city": "Amsterdam",
+        "country": "Netherlands",
+        "isp": "Microsoft Corporation",
+        "lat": 52.3702,
+        "lon": 4.89517,
+        "org": "Microsoft Corporation",
+        "reverse": "",
+        "zip": "1012"
+    },
+    "195.149.199.39": {
+        "city": "Warsaw",
+        "country": "Poland",
+        "isp": "OKTAWAVE",
+        "lat": 52.1843,
+        "lon": 20.9997,
+        "org": "Oktawave Sp. z o.o",
+        "reverse": "",
+        "zip": ""
+    },
+    "178.216.203.118": {
+        "city": "Ostrorog",
+        "country": "Poland",
+        "isp": "Fotigo.pl Sp. z o.o.",
+        "lat": 52.6249,
+        "lon": 16.4547,
+        "org": "E24 Sp. z o.o.",
+        "reverse": "hpba.client.beyond.pl",
+        "zip": "64-560"
+    },
+    "51.77.43.6": {
+        "city": "Warsaw",
+        "country": "Poland",
+        "isp": "OVH SAS",
+        "lat": 52.2254,
+        "lon": 21.0489,
+        "org": "OVH Sp. z o. o",
+        "reverse": "web7.jdm.pl",
+        "zip": ""
+    },
+    "217.17.45.162": {
+        "city": "Warsaw",
+        "country": "Poland",
+        "isp": "ATMAN",
+        "lat": 52.1834,
+        "lon": 21.0064,
+        "org": "ATM S.A.",
+        "reverse": "www.polityka.pl",
+        "zip": "02-672"
+    },
+    "216.58.215.99": {
+        "city": "Warsaw",
+        "country": "Poland",
+        "isp": "Google LLC",
+        "lat": 52.2297,
+        "lon": 21.0122,
+        "org": "Google LLC",
+        "reverse": "waw02s17-in-f3.1e100.net",
+        "zip": ""
+    }
+}

@@ -1,0 +1,101 @@
+ip,date,city,country,isp,lat,lon,org,reverse,zip
+104.25.238.12,2019-11-26 11:26:48.507495,Ashburn,United States,"Cloudflare, Inc.",39.0438,-77.4874,"Cloudflare, Inc.",,20149
+94.23.242.48,2019-02-17 13:33:01.559824,Roubaix,France,OVH ISP,50.6917,3.20014,OVH SAS,tools.wikimedia.pl,59100
+193.109.245.227,2016-02-02 10:42:33.576831,Warsaw,Poland,PZU Centrum Operacji S.A.,52.1366,21.0588,PZU Centrum Operacji S.A,,02-793
+217.17.45.162,2016-04-02 09:55:12.127871,Warsaw,Poland,ATMAN,52.1834,21.0064,ATM S.A.,www.polityka.pl,02-672
+216.58.215.99,2017-11-15 03:30:12.607681,Warsaw,Poland,Google LLC,52.2297,21.0122,Google LLC,waw02s17-in-f3.1e100.net,
+94.23.242.48,2019-11-09 23:56:19.433064,Roubaix,France,OVH ISP,50.6917,3.20014,OVH SAS,tools.wikimedia.pl,59100
+52.232.42.205,2019-04-17 14:04:45.776659,Amsterdam,Netherlands,Microsoft Corporation,52.3702,4.89517,Microsoft Corporation,,1012
+217.17.45.162,2017-01-12 23:26:53.854071,Warsaw,Poland,ATMAN,52.1834,21.0064,ATM S.A.,www.polityka.pl,02-672
+81.168.254.126,2016-01-16 07:17:49.575929,Poznan,Poland,PGF-DIALOG,52.4064,16.9252,Pelion SA,,61-829
+195.149.199.39,2019-12-11 15:04:23.283973,Warsaw,Poland,OKTAWAVE,52.1843,20.9997,Oktawave Sp. z o.o,,
+149.156.96.52,2017-04-03 01:11:34.589557,Krakow,Poland,Academic Computer Centre CYFRONET AGH,50.0646,19.9168,Academic Computer Centre CYFRONET AGH,www.agh.edu.pl,30-059
+216.58.215.99,2017-07-12 08:32:48.377736,Warsaw,Poland,Google LLC,52.2297,21.0122,Google LLC,waw02s17-in-f3.1e100.net,
+213.180.141.140,2016-11-01 11:04:28.967285,Kielce,Poland,Ringier Axel Springer Polska Sp. z o.o.,50.8661,20.6286,Grupa Onet.pl SA - Anycast Services,sg1.any.onet.pl,25-011
+46.229.156.141,2017-10-01 12:41:35.712102,Sopot,Poland,ATM S.A.,54.446,18.5689,Blue Services,rev-46.229.156.141.blueservices.pl,81-756
+149.156.96.52,2018-04-21 10:52:14.392076,Krakow,Poland,Academic Computer Centre CYFRONET AGH,50.0646,19.9168,Academic Computer Centre CYFRONET AGH,www.agh.edu.pl,30-059
+178.216.203.118,2016-12-12 21:37:17.980136,Ostrorog,Poland,Fotigo.pl Sp. z o.o.,52.6249,16.4547,E24 Sp. z o.o.,hpba.client.beyond.pl,64-560
+104.25.238.12,2018-10-19 21:42:38.071490,Ashburn,United States,"Cloudflare, Inc.",39.0438,-77.4874,"Cloudflare, Inc.",,20149
+149.156.96.52,2018-07-20 04:46:40.826097,Krakow,Poland,Academic Computer Centre CYFRONET AGH,50.0646,19.9168,Academic Computer Centre CYFRONET AGH,www.agh.edu.pl,30-059
+52.232.42.205,2019-05-24 17:55:33.132389,Amsterdam,Netherlands,Microsoft Corporation,52.3702,4.89517,Microsoft Corporation,,1012
+108.174.10.10,2017-01-14 05:18:29.769060,Chicago,United States,LinkedIn Corporation,41.8781,-87.6298,LinkedIn Corporation,108-174-10-10.fwd.linkedin.com,60666
+51.77.43.6,2018-02-24 20:43:02.557795,Warsaw,Poland,OVH SAS,52.2254,21.0489,OVH Sp. z o. o,web7.jdm.pl,
+213.180.141.140,2019-04-22 08:06:50.900561,Kielce,Poland,Ringier Axel Springer Polska Sp. z o.o.,50.8661,20.6286,Grupa Onet.pl SA - Anycast Services,sg1.any.onet.pl,25-011
+195.149.199.39,2019-02-14 20:07:17.759865,Warsaw,Poland,OKTAWAVE,52.1843,20.9997,Oktawave Sp. z o.o,,
+193.109.245.227,2018-08-14 21:30:12.622724,Warsaw,Poland,PZU Centrum Operacji S.A.,52.1366,21.0588,PZU Centrum Operacji S.A,,02-793
+94.23.242.48,2016-10-05 16:34:36.125113,Roubaix,France,OVH ISP,50.6917,3.20014,OVH SAS,tools.wikimedia.pl,59100
+66.135.195.175,2017-09-18 17:52:10.232920,San Jose,United States,"eBay, Inc",37.2951,-121.93,"eBay, Inc",ru.ebay.com,95128
+216.58.215.99,2019-02-12 11:41:45.619256,Warsaw,Poland,Google LLC,52.2297,21.0122,Google LLC,waw02s17-in-f3.1e100.net,
+213.180.141.140,2018-04-07 09:51:02.706012,Kielce,Poland,Ringier Axel Springer Polska Sp. z o.o.,50.8661,20.6286,Grupa Onet.pl SA - Anycast Services,sg1.any.onet.pl,25-011
+149.156.96.52,2016-09-09 10:10:27.327583,Krakow,Poland,Academic Computer Centre CYFRONET AGH,50.0646,19.9168,Academic Computer Centre CYFRONET AGH,www.agh.edu.pl,30-059
+81.168.254.126,2016-01-13 22:37:06.177909,Poznan,Poland,PGF-DIALOG,52.4064,16.9252,Pelion SA,,61-829
+104.25.238.12,2018-11-02 13:16:49.834305,Ashburn,United States,"Cloudflare, Inc.",39.0438,-77.4874,"Cloudflare, Inc.",,20149
+195.149.199.39,2016-08-14 21:57:35.826012,Warsaw,Poland,OKTAWAVE,52.1843,20.9997,Oktawave Sp. z o.o,,
+51.77.43.6,2018-11-20 11:42:18.427097,Warsaw,Poland,OVH SAS,52.2254,21.0489,OVH Sp. z o. o,web7.jdm.pl,
+149.156.96.52,2016-11-30 12:41:45.083666,Krakow,Poland,Academic Computer Centre CYFRONET AGH,50.0646,19.9168,Academic Computer Centre CYFRONET AGH,www.agh.edu.pl,30-059
+213.180.141.140,2016-04-09 00:27:31.322751,Kielce,Poland,Ringier Axel Springer Polska Sp. z o.o.,50.8661,20.6286,Grupa Onet.pl SA - Anycast Services,sg1.any.onet.pl,25-011
+52.232.42.205,2018-07-23 04:57:25.921640,Amsterdam,Netherlands,Microsoft Corporation,52.3702,4.89517,Microsoft Corporation,,1012
+66.135.195.175,2018-04-06 02:16:58.781162,San Jose,United States,"eBay, Inc",37.2951,-121.93,"eBay, Inc",ru.ebay.com,95128
+66.135.195.175,2016-07-17 07:35:02.604552,San Jose,United States,"eBay, Inc",37.2951,-121.93,"eBay, Inc",ru.ebay.com,95128
+213.180.141.140,2017-07-28 20:40:53.192376,Kielce,Poland,Ringier Axel Springer Polska Sp. z o.o.,50.8661,20.6286,Grupa Onet.pl SA - Anycast Services,sg1.any.onet.pl,25-011
+195.149.199.39,2018-04-19 10:09:01.709595,Warsaw,Poland,OKTAWAVE,52.1843,20.9997,Oktawave Sp. z o.o,,
+66.135.195.175,2016-04-04 20:31:18.519127,San Jose,United States,"eBay, Inc",37.2951,-121.93,"eBay, Inc",ru.ebay.com,95128
+195.149.199.39,2019-05-03 20:25:01.454240,Warsaw,Poland,OKTAWAVE,52.1843,20.9997,Oktawave Sp. z o.o,,
+52.232.42.205,2016-09-03 23:55:06.139221,Amsterdam,Netherlands,Microsoft Corporation,52.3702,4.89517,Microsoft Corporation,,1012
+81.168.254.126,2019-03-26 10:27:45.146151,Poznan,Poland,PGF-DIALOG,52.4064,16.9252,Pelion SA,,61-829
+213.180.141.140,2016-05-19 03:59:48.301050,Kielce,Poland,Ringier Axel Springer Polska Sp. z o.o.,50.8661,20.6286,Grupa Onet.pl SA - Anycast Services,sg1.any.onet.pl,25-011
+217.17.45.162,2018-07-14 15:05:29.403157,Warsaw,Poland,ATMAN,52.1834,21.0064,ATM S.A.,www.polityka.pl,02-672
+178.216.203.118,2017-11-04 01:49:50.936736,Ostrorog,Poland,Fotigo.pl Sp. z o.o.,52.6249,16.4547,E24 Sp. z o.o.,hpba.client.beyond.pl,64-560
+217.17.45.162,2017-04-15 02:48:07.096377,Warsaw,Poland,ATMAN,52.1834,21.0064,ATM S.A.,www.polityka.pl,02-672
+213.180.141.140,2016-07-06 14:10:56.535477,Kielce,Poland,Ringier Axel Springer Polska Sp. z o.o.,50.8661,20.6286,Grupa Onet.pl SA - Anycast Services,sg1.any.onet.pl,25-011
+108.174.10.10,2017-07-17 00:24:34.493416,Chicago,United States,LinkedIn Corporation,41.8781,-87.6298,LinkedIn Corporation,108-174-10-10.fwd.linkedin.com,60666
+52.232.42.205,2018-02-23 12:27:42.784704,Amsterdam,Netherlands,Microsoft Corporation,52.3702,4.89517,Microsoft Corporation,,1012
+149.156.96.52,2019-11-12 05:46:18.458277,Krakow,Poland,Academic Computer Centre CYFRONET AGH,50.0646,19.9168,Academic Computer Centre CYFRONET AGH,www.agh.edu.pl,30-059
+52.232.42.205,2017-10-13 21:30:15.381315,Amsterdam,Netherlands,Microsoft Corporation,52.3702,4.89517,Microsoft Corporation,,1012
+217.17.45.162,2019-05-22 11:03:35.734251,Warsaw,Poland,ATMAN,52.1834,21.0064,ATM S.A.,www.polityka.pl,02-672
+195.149.199.39,2017-07-07 15:13:37.052442,Warsaw,Poland,OKTAWAVE,52.1843,20.9997,Oktawave Sp. z o.o,,
+52.232.42.205,2016-01-28 12:37:16.067248,Amsterdam,Netherlands,Microsoft Corporation,52.3702,4.89517,Microsoft Corporation,,1012
+149.156.96.52,2019-09-10 14:20:06.455212,Krakow,Poland,Academic Computer Centre CYFRONET AGH,50.0646,19.9168,Academic Computer Centre CYFRONET AGH,www.agh.edu.pl,30-059
+52.232.42.205,2019-09-29 09:11:26.001599,Amsterdam,Netherlands,Microsoft Corporation,52.3702,4.89517,Microsoft Corporation,,1012
+195.149.199.39,2019-07-12 01:36:19.327316,Warsaw,Poland,OKTAWAVE,52.1843,20.9997,Oktawave Sp. z o.o,,
+195.149.199.39,2018-08-10 00:55:11.052238,Warsaw,Poland,OKTAWAVE,52.1843,20.9997,Oktawave Sp. z o.o,,
+217.17.45.162,2019-06-20 21:13:53.290090,Warsaw,Poland,ATMAN,52.1834,21.0064,ATM S.A.,www.polityka.pl,02-672
+213.180.141.140,2019-02-10 15:25:47.736702,Kielce,Poland,Ringier Axel Springer Polska Sp. z o.o.,50.8661,20.6286,Grupa Onet.pl SA - Anycast Services,sg1.any.onet.pl,25-011
+195.149.199.39,2016-11-24 02:56:04.787413,Warsaw,Poland,OKTAWAVE,52.1843,20.9997,Oktawave Sp. z o.o,,
+213.180.141.140,2016-02-07 08:58:47.253959,Kielce,Poland,Ringier Axel Springer Polska Sp. z o.o.,50.8661,20.6286,Grupa Onet.pl SA - Anycast Services,sg1.any.onet.pl,25-011
+104.25.238.12,2018-10-29 09:40:23.792900,Ashburn,United States,"Cloudflare, Inc.",39.0438,-77.4874,"Cloudflare, Inc.",,20149
+213.180.141.140,2017-10-25 20:33:48.040728,Kielce,Poland,Ringier Axel Springer Polska Sp. z o.o.,50.8661,20.6286,Grupa Onet.pl SA - Anycast Services,sg1.any.onet.pl,25-011
+213.180.141.140,2019-05-22 08:41:10.254631,Kielce,Poland,Ringier Axel Springer Polska Sp. z o.o.,50.8661,20.6286,Grupa Onet.pl SA - Anycast Services,sg1.any.onet.pl,25-011
+213.180.141.140,2017-04-29 18:40:39.833245,Kielce,Poland,Ringier Axel Springer Polska Sp. z o.o.,50.8661,20.6286,Grupa Onet.pl SA - Anycast Services,sg1.any.onet.pl,25-011
+217.17.45.162,2019-08-11 19:37:21.700340,Warsaw,Poland,ATMAN,52.1834,21.0064,ATM S.A.,www.polityka.pl,02-672
+94.23.242.48,2017-01-13 21:40:42.170146,Roubaix,France,OVH ISP,50.6917,3.20014,OVH SAS,tools.wikimedia.pl,59100
+213.180.141.140,2018-04-29 21:06:04.749909,Kielce,Poland,Ringier Axel Springer Polska Sp. z o.o.,50.8661,20.6286,Grupa Onet.pl SA - Anycast Services,sg1.any.onet.pl,25-011
+213.180.141.140,2017-06-25 16:09:27.093802,Kielce,Poland,Ringier Axel Springer Polska Sp. z o.o.,50.8661,20.6286,Grupa Onet.pl SA - Anycast Services,sg1.any.onet.pl,25-011
+178.216.203.118,2016-06-02 10:37:38.565551,Ostrorog,Poland,Fotigo.pl Sp. z o.o.,52.6249,16.4547,E24 Sp. z o.o.,hpba.client.beyond.pl,64-560
+216.58.215.99,2018-11-28 05:52:36.033529,Warsaw,Poland,Google LLC,52.2297,21.0122,Google LLC,waw02s17-in-f3.1e100.net,
+149.156.96.52,2018-02-16 13:28:03.866854,Krakow,Poland,Academic Computer Centre CYFRONET AGH,50.0646,19.9168,Academic Computer Centre CYFRONET AGH,www.agh.edu.pl,30-059
+213.180.141.140,2019-05-21 09:29:32.309053,Kielce,Poland,Ringier Axel Springer Polska Sp. z o.o.,50.8661,20.6286,Grupa Onet.pl SA - Anycast Services,sg1.any.onet.pl,25-011
+217.17.45.162,2016-07-31 10:19:58.935636,Warsaw,Poland,ATMAN,52.1834,21.0064,ATM S.A.,www.polityka.pl,02-672
+216.58.215.99,2016-05-25 05:06:24.827062,Warsaw,Poland,Google LLC,52.2297,21.0122,Google LLC,waw02s17-in-f3.1e100.net,
+108.174.10.10,2019-09-18 10:08:21.386322,Chicago,United States,LinkedIn Corporation,41.8781,-87.6298,LinkedIn Corporation,108-174-10-10.fwd.linkedin.com,60666
+195.149.199.39,2016-01-30 22:40:14.101802,Warsaw,Poland,OKTAWAVE,52.1843,20.9997,Oktawave Sp. z o.o,,
+185.60.216.35,2016-08-12 09:24:42.953115,Frankfurt am Main,Germany,"Facebook, Inc.",50.1109,8.68213,Facebook Ireland Ltd,edge-star-mini-shv-01-frx5.facebook.com,60313
+66.135.195.175,2018-03-29 04:47:07.695326,San Jose,United States,"eBay, Inc",37.2951,-121.93,"eBay, Inc",ru.ebay.com,95128
+178.216.203.118,2018-03-03 00:15:12.556425,Ostrorog,Poland,Fotigo.pl Sp. z o.o.,52.6249,16.4547,E24 Sp. z o.o.,hpba.client.beyond.pl,64-560
+213.180.141.140,2019-11-26 12:11:51.365080,Kielce,Poland,Ringier Axel Springer Polska Sp. z o.o.,50.8661,20.6286,Grupa Onet.pl SA - Anycast Services,sg1.any.onet.pl,25-011
+149.156.96.52,2016-07-02 22:20:50.298536,Krakow,Poland,Academic Computer Centre CYFRONET AGH,50.0646,19.9168,Academic Computer Centre CYFRONET AGH,www.agh.edu.pl,30-059
+104.25.238.12,2017-12-31 18:33:21.506216,Ashburn,United States,"Cloudflare, Inc.",39.0438,-77.4874,"Cloudflare, Inc.",,20149
+46.229.156.141,2019-01-20 11:23:45.156885,Sopot,Poland,ATM S.A.,54.446,18.5689,Blue Services,rev-46.229.156.141.blueservices.pl,81-756
+195.149.199.39,2019-12-27 12:39:53.992266,Warsaw,Poland,OKTAWAVE,52.1843,20.9997,Oktawave Sp. z o.o,,
+149.156.96.52,2016-11-05 20:00:53.770465,Krakow,Poland,Academic Computer Centre CYFRONET AGH,50.0646,19.9168,Academic Computer Centre CYFRONET AGH,www.agh.edu.pl,30-059
+216.58.215.99,2019-11-16 06:24:17.442978,Warsaw,Poland,Google LLC,52.2297,21.0122,Google LLC,waw02s17-in-f3.1e100.net,
+217.17.45.162,2017-04-12 00:09:09.625106,Warsaw,Poland,ATMAN,52.1834,21.0064,ATM S.A.,www.polityka.pl,02-672
+94.23.242.48,2016-10-16 06:48:13.152143,Roubaix,France,OVH ISP,50.6917,3.20014,OVH SAS,tools.wikimedia.pl,59100
+149.156.96.52,2019-12-29 07:48:09.773881,Krakow,Poland,Academic Computer Centre CYFRONET AGH,50.0646,19.9168,Academic Computer Centre CYFRONET AGH,www.agh.edu.pl,30-059
+213.180.141.140,2016-07-27 16:03:39.024704,Kielce,Poland,Ringier Axel Springer Polska Sp. z o.o.,50.8661,20.6286,Grupa Onet.pl SA - Anycast Services,sg1.any.onet.pl,25-011
+81.168.254.126,2019-07-25 20:29:35.053724,Poznan,Poland,PGF-DIALOG,52.4064,16.9252,Pelion SA,,61-829
+193.109.245.227,2019-04-01 17:46:49.816620,Warsaw,Poland,PZU Centrum Operacji S.A.,52.1366,21.0588,PZU Centrum Operacji S.A,,02-793
+216.58.215.99,2018-04-02 18:56:04.332207,Warsaw,Poland,Google LLC,52.2297,21.0122,Google LLC,waw02s17-in-f3.1e100.net,
+104.25.238.12,2016-01-15 19:52:17.400420,Ashburn,United States,"Cloudflare, Inc.",39.0438,-77.4874,"Cloudflare, Inc.",,20149
+46.229.156.141,2019-05-05 21:15:26.993489,Sopot,Poland,ATM S.A.,54.446,18.5689,Blue Services,rev-46.229.156.141.blueservices.pl,81-756
+217.17.45.162,2017-02-28 08:53:15.833311,Warsaw,Poland,ATMAN,52.1834,21.0064,ATM S.A.,www.polityka.pl,02-672
