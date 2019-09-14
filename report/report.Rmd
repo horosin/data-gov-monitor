@@ -18,8 +18,7 @@ output:
 ---
 
 ```{r, include = FALSE}
-devtools::install_github("jcheng5/bubbles")
-install.packages('/home/iga_niemiec/Pulpit/hakje/data-gov-monitor/bubbles-master.zip', repos = NULL)
+#devtools::install_github("jcheng5/bubbles")
 library(devtools)
 library(bubbles)
 library(dplyr)
@@ -46,7 +45,7 @@ all_data <- read.table("../data-analysis/log-data//mock_request_data.csv", heade
   dplyr::mutate(mean_lon = mean(lon)) %>%
   dplyr::mutate(mean_lat = mean(lat)) %>%
   dplyr::mutate(city_count = n()) %>%
-  ungroup() %>%
+  dplyr::ungroup() %>%
   dplyr::mutate(category_name = ifelse(category_name == "", "Inne", category_name))
   #dplyr::mutate(date2 = floor_date(date, "month"))
 # TODO floor date to make lineplot
@@ -59,6 +58,7 @@ all_data$date <- as.Date(all_data$date, format = c("%Y-%m-%d"))
 viri <- c("#440154FF", "#481567FF", "#482677FF", "#453781FF", "#404788FF", "#39568CFF", "#33638DFF", "#2D708EFF",
           "#287D8EFF", "#238A8DFF", "#1F968BFF", "#20A387FF", "#29AF7FFF", "#3CBB75FF", "#55C667FF", "#73D055FF",
           "#95D840FF", "#B8DE29FF", "#DCE319FF", "#FDE725FF")
+viri2 <- gsub("FF", "", viri)
 ```
 
 
@@ -116,26 +116,17 @@ plot(p)
 
 # Kategorie danych - bubble
 
-```{r, include = FALSE}
-p <- ggplot(all_data, aes(x = date)) +
-        geom_bar(aes(fill = category_name), alpha=0.7, binwidth = 90) +
-        #scale_fill_manual(values=blue_pallete) +
-        scale_x_date(date_breaks="6 months", date_labels="%Y-%m") +
-        theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
-        labs(fill = "kategoria danych") +
-        xlab("data") +
-        ylab("liczba zapytań") +
-        scale_fill_manual(values=viri) +
-        # TODO integer scale
-        #scale_y_continuous(function(n) c(0, floor(max(n)/2), max(n))) 
-        ggtitle("ilość danych w kazdej kategorii w zalezności od czasu ściągnia")
+```{r, include = TRUE}
+categories <- data.frame(table(all_data$category_name))
+cat_viri <- viri2[1:nrow(categories)]
 
-plot(p)
-# 
-# p <- ggplot(all_data,aes(x=date,color=category_name)) + 
-#   geom_line(stat='count')
-# 
-# plot(p)
+bubbles(value = categories$Freq, label = categories$Var1,
+  color = cat_viri, textColor = "black")
+
 ```
 
 # cokolwiek jeszcze
+
+# TODO top 10 uzytkownikow/rok
+# TODO top 10 tutulow/rok
+# TODO top 10 organizacje/rok
