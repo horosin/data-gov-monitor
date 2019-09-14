@@ -26,6 +26,8 @@ library(maps)
 library(ggmap)
 library(plotly)
 library(scales)
+library(lubridate)
+library(scales)
 options(stringsAsFactors = F)
 knitr::opts_knit$set(root.dir = "./")
 ```
@@ -35,14 +37,24 @@ knitr::opts_knit$set(root.dir = "./")
 phrase_data <- read.table("../data/monitorowanie-fraz.tsv", header = T, sep="\t")
 phrase_data$relevance_score <- as.character(phrase_data$relevance_score)
 all_data <- read.table("../data-analysis/log-data//mock_request_data.csv", header = T, sep=",") %>%
-  dplyr::filter(country == "Poland")
+  dplyr::filter(country == "Poland") %>%
+  dplyr::group_by(city) %>%
+  dplyr::mutate(mean_lon = mean(lon)) %>%
+  dplyr::mutate(mean_lat = mean(lat)) %>%
+  dplyr::mutate(city_count = n()) %>%
+  ungroup() %>%
+  dplyr::mutate(category_name = ifelse(category_name == "", "Inne", category_name))
+  #dplyr::mutate(date2 = floor_date(date, "month"))
+# TODO floor date to make lineplot
 
 all_data <- dplyr::mutate(all_data, size = c(rep(50, 2000), rep(80, 2000), rep(100, nrow(all_data)-4000)))
-all_data$date <- as.Date(all_data$date, format = c("%Y-%m-%d"))
+#all_data$date2 <- floor_date(date, "month")
 # change date format
-#all_data$date2 <- as.Date(all_data$date, format = c("%Y-%m"))
-#TODO change it to the better one
-blue_pallete <- c("#011f4b", "#03396c", "#005b96", "#6497b1", "#b3cde0")
+all_data$date <- as.Date(all_data$date, format = c("%Y-%m-%d"))
+
+viri <- c("#440154FF", "#481567FF", "#482677FF", "#453781FF", "#404788FF", "#39568CFF", "#33638DFF", "#2D708EFF",
+          "#287D8EFF", "#238A8DFF", "#1F968BFF", "#20A387FF", "#29AF7FFF", "#3CBB75FF", "#55C667FF", "#73D055FF",
+          "#95D840FF", "#B8DE29FF", "#DCE319FF", "#FDE725FF")
 ```
 
 
@@ -59,13 +71,15 @@ knitr::kable(phrase_data[, -6]) %>%
 # Mapa danych
 
 ```{r, include = TRUE}
-p <- ggplot(all_data, aes(lon, lat)) +
-        borders(regions="poland", size=1, fill="#c9c5c1") +
-        coord_fixed(1.3) +
-        geom_point(aes(color = category_name, size = size), alpha=0.7) +
-        #scale_color_manual(values=blue_pallete) +
-        #scale_color_brewer(palette="Blues")
-        theme_void()
+p <- ggplot(all_data, aes(mean_lon, mean_lat)) +
+        borders(regions="poland", size=1, fill="#D3D3D3") +
+        coord_fixed(1.6) +
+        geom_point(aes(color = city, size = city_count), alpha=0.5) +
+        labs(color = "miasto", size = "liczba zapytań") +
+        scale_size_continuous(range = c(1, 30)) +
+        scale_color_manual(values=viri) +
+        theme_void(base_size=20)
+#TODO tytuł, kolory
 
 plot(p)
 ```
@@ -74,14 +88,24 @@ plot(p)
 
 ```{r, include = TRUE}
 p <- ggplot(all_data, aes(x = date)) +
-        geom_bar(aes(fill = category_name), alpha=0.7, binwidth = 30) +
+        geom_bar(aes(fill = category_name), alpha=0.7, binwidth = 90) +
         #scale_fill_manual(values=blue_pallete) +
-        scale_x_date(date_breaks="2 months", date_labels="%Y-%m") +
+        scale_x_date(date_breaks="6 months", date_labels="%Y-%m") +
+        theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+        labs(fill = "kategoria danych") +
+        xlab("data") +
+        ylab("liczba zapytań") +
+        scale_fill_manual(values=viri) +
         # TODO integer scale
         #scale_y_continuous(function(n) c(0, floor(max(n)/2), max(n))) 
         ggtitle("ilość danych w kazdej kategorii w zalezności od czasu ściągnia")
 
 plot(p)
+# 
+# p <- ggplot(all_data,aes(x=date,color=category_name)) + 
+#   geom_line(stat='count')
+# 
+# plot(p)
 ```
 
 # Kategorie użytkowników
