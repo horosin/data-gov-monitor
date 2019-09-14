@@ -4,31 +4,31 @@
   font-family: 'Roboto-Regular';
   font-style: normal;
   font-weight: 400;
-  src: url(fonts/Roboto-Regular.ttf) format('truetype');
+  src: url(./Roboto-Regular.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Roboto-Regular;
   font-style: normal;
   font-weight: 700;
-  src: url(fonts/Roboto-Regular.ttf) format('truetype');
+  src: url(./Roboto-Regular.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Roboto-Regular';
   font-style: italic;
   font-weight: 400;
-  src: url(fonts/Roboto-RegularItalic.ttf) format('truetype');
+  src: url(./Roboto-RegularItalic.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Roboto-Regular';
   font-style: normal;
   font-weight: 400;
-  src: url(fonts/Roboto-Regular.ttf) format('truetype');
+  src: url(./Roboto-Regular.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Roboto-Medium';
   font-style: normal;
   font-weight: 700;
-  src: url(fonts/Roboto-Medium.ttf) format('truetype');
+  src: url(./Roboto-Medium.ttf) format('truetype');
 }
 
 
@@ -681,7 +681,7 @@ a {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: 0 2em;
-    color:#c7254e;
+    color:#007bff;
     font-weight: 300;
     padding: .125em 1px 0 1px;
     transition: background-position .15s, color .15s;
@@ -830,7 +830,7 @@ hr{
     padding:0.809em;
     display:block;
     color:#fcfcfc;
-    font-size: 150%;
+    font-size: 120%;
     margin-top: 0px;
     margin-bottom:0.809em;
 }

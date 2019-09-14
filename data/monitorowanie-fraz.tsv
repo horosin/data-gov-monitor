@@ -1,0 +1,23 @@
+id	service	service_url	relevance_score	category	keywords
+1	Terminy Leczenia NFZ 	https://api.nfz.gov.pl/app-itl-api/	100	Zdrowie	nfz,terminy leczenia,kolejki nfz
+2	Prześwietl.pl 	https://przeswietl.pl/	88	Przedsiębiorstwa	informacja gospodarcza,przedsiębiorcy,rejestr
+3	Krajowa Mapa Zagrożeń Bezpieczeństwa 	https://mapy.geoportal.gov.pl/iMapLite/KMZBPublic.html	93	Mapy	WMS,uzbrojenie terenu,integracja,usługa sieciowa
+4	Krajowa Integracja Uzbrojenia Terenu	http://polska.e-mapa.net/	78	Mapy	WMS,uzbrojenie terenu,integracja,usługa sieciowa
+5	Aplikacja do sprawdzania adresu uniwersalnego	http://www.itia.pl/adres/	91	Dane geolokacyjne	adres,punkt adresowy,współrzędne X Y,PNA,adres uniwersalny,Teryt
+6	Jakdojade.pl - rozkłady, bilety, planowanie podróży	http://jakdojade.pl	87	Aplikacje mobilne	
+7	Mobilna Granica	https://granica.gov.pl/aplikacja-mobilna-granica.php?v=pl	94	Inne	granica.gov.pl,mobilna granica,czasy oczekiwania,przekraczanie granicy,drogowe przejścia graniczne
+8	Usługa Lokalizacji Adresów	http://ula.punktyadresowe.pl/	82	Dane geolokacyjne	lokalizacja,gmina,adres
+9	Geoportal Otwartych Danych Przestrzennych	http://polska.e-mapa.net	83	Dane geolokacyjne	geoportal,portal mapowy,plany miejscowe,uzbrojenie terenu,ewidencja gruntów,działki,gmina,powiat,usługa sieciowa,adres
+10	Otwarte Zabytki	http://otwartezabytki.pl	88	Kultura	
+11	iPolak	https://www.msz.gov.pl/pl/p/msz_pl/informacje_konsularne/ipolak/	97	Inne	Polak za granicą,bezpieczne wakacje,iPolak
+12	Śląska Policja	http://slaska.policja.gov.pl/kat/policja-slaska/aplikacja-mobilna/152000,Aplikacja-na-urzadzenia-mobilne.html	90	Inne	prewencja,bezpieczeństwo,Śląska Policja,jednostki policji,poszukiwani,zaginieni,kontakt,policja
+13	ARbus	http://arbus.actumlab.com/	88	Inne	tristar,AR,wirtualna rzeczywistość,rozkład jazdy,augmented reality,autobus,tramwaj
+14	Znajdź działkę ewidencyjną	http://uldk.dzialkikatastralne.pl/	96	Dane geolokacyjne	działki,lokalizacja,egib,gis,powiat
+15	Asystent Granica	https://granica.gov.pl/aplikacja-asystent-granica.php?v=pl	99	Inne	granica.gov.pl,przekraczanie granicy,przejścia graniczne,asystent granica
+16	Dane adresowe gmin	http://integracja.gugik.gov.pl/daneadresowe/	84	Dane geolokacyjne	gmina,adres
+17	Polska w Liczbach - statystyka w przyjaznej formie.	http://www.polskawliczbach.pl	91	Inne	
+18	Na co idą moje pieniądze	http://www.nacoidamojepieniadze.pl	89	Inne	podatnik,budżet,udział,gmina
+19	Subsidy Stories - wydatkowanie funduszy unijnych	http://subsidystories.eu/country.html?country=PL	83	Inne	
+20	Policyjna mapa zagrożeń przestępstwami na tle seksualnym	https://policja.maps.arcgis.com/apps/MapJournal/index.html?appid=338ca7cf5e5043778c76b14f696c8eab	92	Inne	mapa,przestępstwa na tle seksualnym,przestępczość,bezpieczeństwo,policja
+21	Moja Komenda	https://play.google.com/store/apps/details?id=com.altconnect.android.mk&hl=pl	84	Aplikacje mobilne	dzielnicowy,komenda,posterunek,policja
+22	ZTM Utrudnienia	https://itunes.apple.com/pl/app/warszawa-utrudnienia-ztm/id1439501059?l=pl&mt=8	95	Aplikacje mobilne	komunikacja,metro,skm,ztm,tramwaj,autobus,utrudnienia
