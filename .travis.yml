@@ -9,14 +9,13 @@ branches:
   - master
 
 script:
-  - mkdir build
-  - cp report/report.html build/index.html
-  - cp report/report.html build/404.html
+  - cp report/report.html report/index.html
+  - cp report/report.html report/404.html
 
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  local_dir: build
+  local_dir: report
   on:
     branch: master
