@@ -10,8 +10,8 @@ branches:
 
 script:
   - mkdir build
-  - mv report/report.html build/index.html
-  - mv report/report.html build/404.html
+  - cp report/report.html build/index.html
+  - cp report/report.html build/404.html
 
 deploy:
   provider: pages
