@@ -14,7 +14,7 @@ with open('log-data/mock_ip_addresses.csv', newline='') as csvfile:
         ips.append(row[0])
         weights.append(random.randint(1, 40))
 
-record_number_to_generate = 100
+record_number_to_generate = 10000
 
 ip_random_choices = random.choices(ips, weights, k=record_number_to_generate)
 date_random_choices = gen_datetimes(record_number_to_generate, min_year=2016, max_year=2019)
