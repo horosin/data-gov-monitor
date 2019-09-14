@@ -69,10 +69,11 @@ p <- ggplot(all_data, aes(mean_lon, mean_lat)) +
         coord_fixed(1.6) +
         geom_point(aes(color = city, size = city_count), alpha=0.5) +
         labs(color = "miasto", size = "liczba zapytań") +
-        scale_size_continuous(range = c(1, 15)) +
+        scale_size_continuous(range = c(1, 30)) +
         #scale_color_manual(values=blue_pallete) +
         #scale_color_brewer(palette="Blues")
-        theme_void()
+        theme_void(base_size=20)
+#TODO tytuł, kolory
 
 plot(p)
 ```
