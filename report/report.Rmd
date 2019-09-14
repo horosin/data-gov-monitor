@@ -18,6 +18,10 @@ output:
 ---
 
 ```{r, include = FALSE}
+devtools::install_github("jcheng5/bubbles")
+install.packages('/home/iga_niemiec/Pulpit/hakje/data-gov-monitor/bubbles-master.zip', repos = NULL)
+library(devtools)
+library(bubbles)
 library(dplyr)
 library(knitr)
 library(kableExtra)
@@ -60,7 +64,9 @@ viri <- c("#440154FF", "#481567FF", "#482677FF", "#453781FF", "#404788FF", "#395
 
 # Domeny wykorzystujące dane 
 
-## Domeny wykorzystujące dane pochodzące z serwisu https://www.dane.gov.pl
+## Śledzenie fraz na stronach lub w wynikach wyszukiwania
+
+Wyniki monitoringu referencji do strony dane.gov.pl w witrynach internetowych uzyskane z portalu Google Alerts. Z listy aplikacji wykluczane są strony informacyjne i rządowe. Każda pozostała jest rangowana wg. prawdopodobieństwa wykorzystania danych z portalu (jak na przykład obnecność tabel, słów kluczowych, kategorii charakterystycznych dla źródeł dane.gov.pl) i jej popularności.
 
 ```{r, include = TRUE}
 knitr::kable(phrase_data[, -6]) %>%
@@ -108,6 +114,28 @@ plot(p)
 # plot(p)
 ```
 
-# Kategorie użytkowników
+# Kategorie danych - bubble
+
+```{r, include = FALSE}
+p <- ggplot(all_data, aes(x = date)) +
+        geom_bar(aes(fill = category_name), alpha=0.7, binwidth = 90) +
+        #scale_fill_manual(values=blue_pallete) +
+        scale_x_date(date_breaks="6 months", date_labels="%Y-%m") +
+        theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+        labs(fill = "kategoria danych") +
+        xlab("data") +
+        ylab("liczba zapytań") +
+        scale_fill_manual(values=viri) +
+        # TODO integer scale
+        #scale_y_continuous(function(n) c(0, floor(max(n)/2), max(n))) 
+        ggtitle("ilość danych w kazdej kategorii w zalezności od czasu ściągnia")
+
+plot(p)
+# 
+# p <- ggplot(all_data,aes(x=date,color=category_name)) + 
+#   geom_line(stat='count')
+# 
+# plot(p)
+```
 
 # cokolwiek jeszcze

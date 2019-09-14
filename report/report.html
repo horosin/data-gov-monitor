@@ -112,11 +112,11 @@ $(document).ready(function () {
     <div id="text-table-of-contents">
       <ul>
       <li><a href="#domeny-wykorzystujace-dane"><span class="toc-section-number">1</span> Domeny wykorzystujące dane</a><ul>
-      <li><a href="#domeny-wykorzystujace-dane-pochodzace-z-serwisu-httpswww.dane.gov.pl"><span class="toc-section-number">1.1</span> Domeny wykorzystujące dane pochodzące z serwisu <a href="https://www.dane.gov.pl" class="uri">https://www.dane.gov.pl</a></a></li>
+      <li><a href="#sledzenie-fraz-na-stronach-lub-w-wynikach-wyszukiwania"><span class="toc-section-number">1.1</span> Śledzenie fraz na stronach lub w wynikach wyszukiwania</a></li>
       </ul></li>
       <li><a href="#mapa-danych"><span class="toc-section-number">2</span> Mapa danych</a></li>
       <li><a href="#dane-w-czasie"><span class="toc-section-number">3</span> Dane w czasie</a></li>
-      <li><a href="#kategorie-uzytkownikow"><span class="toc-section-number">4</span> Kategorie użytkowników</a></li>
+      <li><a href="#kategorie-danych---bubble"><span class="toc-section-number">4</span> Kategorie danych - bubble</a></li>
       <li><a href="#cokolwiek-jeszcze"><span class="toc-section-number">5</span> cokolwiek jeszcze</a></li>
       </ul>
     </div>
@@ -125,8 +125,9 @@ $(document).ready(function () {
 <div id="main">
 <div id="domeny-wykorzystujace-dane" class="section level1">
 <h1><span class="header-section-number">1</span> Domeny wykorzystujące dane</h1>
-<div id="domeny-wykorzystujace-dane-pochodzace-z-serwisu-httpswww.dane.gov.pl" class="section level2">
-<h2><span class="header-section-number">1.1</span> Domeny wykorzystujące dane pochodzące z serwisu <a href="https://www.dane.gov.pl" class="uri">https://www.dane.gov.pl</a></h2>
+<div id="sledzenie-fraz-na-stronach-lub-w-wynikach-wyszukiwania" class="section level2">
+<h2><span class="header-section-number">1.1</span> Śledzenie fraz na stronach lub w wynikach wyszukiwania</h2>
+<p>Wyniki monitoringu referencji do strony dane.gov.pl w witrynach internetowych uzyskane z portalu Google Alerts. Z listy aplikacji wykluczane są strony informacyjne i rządowe. Każda pozostała jest rangowana wg. prawdopodobieństwa wykorzystania danych z portalu (jak na przykład obnecność tabel, słów kluczowych, kategorii charakterystycznych dla źródeł dane.gov.pl) i jej popularności.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">knitr<span class="op">::</span><span class="kw">kable</span>(phrase_data[, <span class="op">-</span><span class="dv">6</span>]) <span class="op">%&gt;%</span>
 <span class="st">   </span><span class="kw">kable_styling</span>(<span class="dt">bootstrap_options =</span> <span class="kw">c</span>(<span class="st">&quot;striped&quot;</span>, <span class="st">&quot;hover&quot;</span>, <span class="st">&quot;condensed&quot;</span>),
                  <span class="dt">position =</span> <span class="st">&quot;float_left&quot;</span>)</code></pre></div>
@@ -568,8 +569,8 @@ Aplikacje mobilne
 <span class="co"># </span>
 <span class="co"># plot(p)</span></code></pre></div>
 </div>
-<div id="kategorie-uzytkownikow" class="section level1">
-<h1><span class="header-section-number">4</span> Kategorie użytkowników</h1>
+<div id="kategorie-danych---bubble" class="section level1">
+<h1><span class="header-section-number">4</span> Kategorie danych - bubble</h1>
 </div>
 <div id="cokolwiek-jeszcze" class="section level1">
 <h1><span class="header-section-number">5</span> cokolwiek jeszcze</h1>
