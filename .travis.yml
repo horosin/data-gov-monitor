@@ -1,0 +1,22 @@
+
+language: node_js
+node_js:
+  - "12"
+sudo: false
+
+branches:
+  only:
+  - master
+
+script:
+  - mkdir build
+  - cp report/report.html build/index.html
+  - cp report/report.html build/404.html
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: build
+  on:
+    branch: master
