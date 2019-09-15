@@ -87,21 +87,10 @@ p <- ggplot(all_data, aes(mean_lon, mean_lat)) +
         scale_size_continuous(range = c(1, 30)) +
         scale_color_manual(values=viri) +
         theme_void(base_size=20) +
+        guides(color = guide_legend(override.aes = list(size = 7))) +
         ggtitle("Liczba zapytań w poszczególnych miastach")
-#TODO kolory
 plot(p)
 
-# d <- ggplot(all_data, aes(mean_lon, mean_lat)) +
-#         borders(regions="poland", size=1, fill="#D3D3D3") +
-#         coord_fixed(1.6) +
-#         geom_density(aes(color = city, size = city_count), alpha=0.5) +
-#         labs(color = "miasto", size = "liczba zapytań") +
-#         scale_size_continuous(range = c(1, 30)) +
-#         scale_color_manual(values=viri) +
-#         theme_void(base_size=20) +
-#         ggtitle("Liczba zapytań w poszczególnych miastach")
-# #TODO kolory
-# plot(d)
 ```
 
 # Kategorie pobieranych danych
