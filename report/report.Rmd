@@ -126,14 +126,19 @@ p <- ggplot(all_data, aes(x = date)) +
         geom_bar(aes(fill = category_name), alpha=0.7, binwidth = 90) +
         #scale_fill_manual(values=blue_pallete) +
         scale_x_date(date_breaks="3 months", date_labels="%Y-%m") +
-        theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+        theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 12),
+              axis.text.y = element_text(size = 12),
+              axis.title = element_text(size = 16),
+              legend.text = element_text(size = 12),
+              legend.title = element_text(size = 16),
+              plot.title = element_text(size = 20, hjust = 0.5)) +
         labs(fill = "kategoria danych") +
         xlab("data") +
         ylab("liczba zapytań") +
         scale_fill_manual(values=viri) +
         # TODO integer scale
         #scale_y_continuous(function(n) c(0, floor(max(n)/2), max(n))) 
-        ggtitle("ilość danych w kazdej kategorii w danym okresie")
+        ggtitle("Ilość danych w każdej kategorii w danym okresie")
 
 plot(p)
 
@@ -161,14 +166,19 @@ p <- ggplot(all_data, aes(x = date)) +
         geom_bar(aes(fill = user_category), alpha=0.7, binwidth = 90) +
         #scale_fill_manual(values=blue_pallete) +
         scale_x_date(date_breaks="3 months", date_labels="%Y-%m") +
-        theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+        theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 12),
+              axis.text.y = element_text(size = 12),
+              axis.title = element_text(size = 16),
+              legend.text = element_text(size = 12),
+              legend.title = element_text(size = 16),
+              plot.title = element_text(size = 20, hjust = 0.5))+
         labs(fill = "typ użytkowników") +
         xlab("data") +
         ylab("liczba zapytań") +
         scale_fill_manual(values=viri) +
         # TODO integer scale
         #scale_y_continuous(function(n) c(0, floor(max(n)/2), max(n))) 
-        ggtitle("ilość zapytań od użytkowników poszczególnych typów w danym okresie")
+        ggtitle("Ilość zapytań od użytkowników poszczególnych typów w danym okresie")
 
 plot(p)
 
@@ -198,7 +208,7 @@ year_id <- 2019
   
   knitr::kable(year_title, caption = paste0("Rok ", year_id)) %>%
    kable_styling(bootstrap_options = c("striped", "hover", "condensed"),
-                 position = "float_left", )
+                 position = "float_left")
 
 ```
 
@@ -224,6 +234,6 @@ year_id <- 2019
   
   knitr::kable(year_title, caption = paste0("Rok ", year_id)) %>%
    kable_styling(bootstrap_options = c("striped", "hover", "condensed"),
-                 position = "float_left", )
+                 position = "float_left")
 
 ```
