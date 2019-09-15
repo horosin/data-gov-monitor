@@ -133,7 +133,7 @@ p <- ggplot(all_data, aes(x = date)) +
         scale_fill_manual(values=viri) +
         # TODO integer scale
         #scale_y_continuous(function(n) c(0, floor(max(n)/2), max(n))) 
-        ggtitle("ilość danych w kazdej kategorii w zalezności od czasu ściągnia")
+        ggtitle("ilość danych w kazdej kategorii w danym okresie")
 
 plot(p)
 
@@ -142,6 +142,37 @@ plot(p)
 # Kategorie użytkowników
 
 Poniższe wykresy prezentują procentowy poszczególnych kategorii użytkowników we wszystkich pobieranych danych oraz ilość pobieranych danych (mierzony ilością zapytań) w poszczególnych okresach czasu 
+
+```{r, include = TRUE, message = F}
+categories <- data.frame(table(all_data$user_category))
+cat_viri <- viri2[1:nrow(categories)]
+
+slices <- categories$Freq
+lbls <- categories$Var1
+pct <- round(slices/sum(slices)*100)
+lbls <- paste(lbls, pct) # add percents to labels
+lbls <- paste(lbls,"%",sep="") # ad % to labels 
+pie(slices, labels = lbls, main="Typy użytkowników najczęściej pobierających dane", col = cat_viri)
+
+```
+
+```{r, include = TRUE, message=F, warning = F}
+p <- ggplot(all_data, aes(x = date)) +
+        geom_bar(aes(fill = user_category), alpha=0.7, binwidth = 90) +
+        #scale_fill_manual(values=blue_pallete) +
+        scale_x_date(date_breaks="3 months", date_labels="%Y-%m") +
+        theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+        labs(fill = "typ użytkowników") +
+        xlab("data") +
+        ylab("liczba zapytań") +
+        scale_fill_manual(values=viri) +
+        # TODO integer scale
+        #scale_y_continuous(function(n) c(0, floor(max(n)/2), max(n))) 
+        ggtitle("ilość zapytań od użytkowników poszczególnych typów w danym okresie")
+
+plot(p)
+
+```
 
 # Statystyki
 
