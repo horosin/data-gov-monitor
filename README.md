@@ -1,11 +1,34 @@
-# data-gov-monitor
-Monitorowanie użycia witryny data.gov.pl
+# data.gov.pl usage monitor
 
-Projekt napisany jest w python3 oraz R.
+A proof-of-concept app created during a 24 hour long hackathon. Finds uses of openly accessible data based on phrase monitoring and reverse IP lookup.
 
-W folderze data-analysis znajdują się skrypty odpowiedzialne za przetworzenie danych wejściowych - logów z serwera.
-Jeśli nie posiadasz logów, możesz je zamockować. Wykorzystaj w tym celu skrypt mock-log-generator.py
+Demo: https://horosin.github.io/data-gov-monitor/
 
-Skrypt ip_reverse_scanner.py w oparciu o usługę ip-api.com uzyskuje informacje na temat adresu ip pobranego z logów serwerowych - jego lokalizacji i opisu ewentualnej usługi web.
+## Technology stack
 
-Aby wygenerować raport zawieraący statystyki należy uruchomić skrypt render_report.R, który wygeneruje raport na podstawie danych z folderu /data-analysis/log-data/ oraz /data/ . Raport wygenerowany zostanie w formacie .html.
+The project was created using:
+- Python - reverse IP tracking and data preprocessing
+- R - report and data analysis.
+
+## Use the code
+The app is not ready for use and is not intended to. If you really want to check it out:
+
+### Report generation
+You need to install R.
+```
+RScript ./render_report.R
+```
+
+### Log generation
+We didn't have any access to the real log data. We had to generate mock logs in order to showcase the functionality. To generate your own logs, use:
+
+```
+python3 ./data-analysis/mock-log-generator.py
+```
+
+## Reverse IP lookup
+
+```
+python3 ./data-analysis/ip_reverse_scanner.py
+```
+
