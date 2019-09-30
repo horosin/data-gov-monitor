@@ -1,0 +1,214 @@
+---
+title: "Monitor użycia"
+author: "Admin"
+date: '`r paste("Date: ",Sys.Date())`'
+output: 
+      rmdformats::readthedown:
+            css: ./readthedown.css
+            html: ./readthedown.html
+            fig_width: 12
+            fig_height: 8
+            highlight: tango
+            lightbox: TRUE
+            thumbnails: FALSE
+            gallery: TRUE
+            use_bookdown: TRUE
+            toc_depth: 3
+            code_folding: hide
+---
+
+```{r, include = FALSE}
+library(dplyr)
+library(knitr)
+library(kableExtra)
+library(ggplot2)
+library(maps)
+library(ggmap)
+library(plotly)
+library(scales)
+options(stringsAsFactors = F)
+knitr::opts_knit$set(root.dir = "./")
+```
+
+```{r, include = FALSE}
+# load input files
+phrase_data <- read.table("../data/monitorowanie-fraz.tsv", header = T, sep="\t")
+phrase_data$relevance_score <- as.character(phrase_data$relevance_score)
+all_data <- read.table("../data-analysis/log-data//mock_request_data.csv", header = T, sep=",") %>%
+  dplyr::filter(country == "Poland") %>%
+  dplyr::group_by(city) %>%
+  dplyr::mutate(mean_lon = mean(lon)) %>%
+  dplyr::mutate(mean_lat = mean(lat)) %>%
+  dplyr::mutate(city_count = n()) %>%
+  dplyr::ungroup() %>%
+  dplyr::mutate(category_name = ifelse(category_name == "", "Inne", category_name))
+
+all_data <- dplyr::mutate(all_data, size = c(rep(50, 2000), rep(80, 2000), rep(100, nrow(all_data)-4000)))
+all_data$date <- as.Date(all_data$date, format = c("%Y-%m-%d"))
+
+viri <- c("#440154FF", "#481567FF", "#482677FF", "#453781FF", "#404788FF", "#39568CFF", "#33638DFF", "#2D708EFF",
+          "#287D8EFF", "#238A8DFF", "#1F968BFF", "#20A387FF", "#29AF7FFF", "#3CBB75FF", "#55C667FF", "#73D055FF",
+          "#95D840FF", "#B8DE29FF", "#DCE319FF", "#FDE725FF")
+viri2 <- gsub("FF", "", viri)
+```
+
+
+# Domeny wykorzystujące dane 
+
+## Śledzenie fraz na stronach lub w wynikach wyszukiwania
+
+Wyniki monitoringu referencji do strony dane.gov.pl w witrynach internetowych uzyskane z portalu Google Alerts. Z listy aplikacji wykluczane są strony informacyjne i rządowe. Każda pozostała jest rangowana wg. prawdopodobieństwa wykorzystania danych z portalu (jak na przykład obnecność tabel, słów kluczowych, kategorii charakterystycznych dla źródeł dane.gov.pl) i jej popularności.
+
+```{r, include = TRUE, echo = F}
+knitr::kable(phrase_data[, -6]) %>%
+   kable_styling(bootstrap_options = c("striped", "hover", "condensed"),
+                 position = "float_left")
+```
+
+# Mapa danych
+
+Poniższy wykres przedstawia liczbę zapytań o dane z domeny dane.gov.pl w poszczególnych miastach Polski
+
+```{r, include = TRUE, message = F, echo = F}
+p <- ggplot(all_data, aes(mean_lon, mean_lat)) +
+        borders(regions="poland", size=1, fill="#D3D3D3") +
+        coord_fixed(1.6) +
+        geom_point(aes(color = city, size = city_count), alpha=0.5) +
+        labs(color = "miasto", size = "liczba zapytań") +
+        scale_size_continuous(range = c(1, 30)) +
+        scale_color_manual(values=viri) +
+        theme_void(base_size=20) +
+        guides(color = guide_legend(override.aes = list(size = 7))) +
+        ggtitle("Liczba zapytań w poszczególnych miastach")
+plot(p)
+
+```
+
+# Kategorie pobieranych danych
+
+Poniższe wykres prezentuje procentowy poszczególnych kategorii danych we wszystkich pobieranych danych oraz ilość pobieranych danych (mierzony ilością zapytań) w poszczególnych okresach czasu 
+
+```{r, include = TRUE, message = F, echo = F}
+categories <- data.frame(table(all_data$category_name))
+cat_viri <- viri2[1:nrow(categories)]
+
+slices <- categories$Freq
+lbls <- categories$Var1
+pct <- round(slices/sum(slices)*100)
+lbls <- paste(lbls, pct) # add percents to labels
+lbls <- paste(lbls,"%",sep="") # ad % to labels 
+pie(slices, labels = lbls, main="Najczęściej pobierane typy danych", col = cat_viri)
+
+```
+
+```{r, include = TRUE, message=F, warning = F, echo = F}
+p <- ggplot(all_data, aes(x = date)) +
+        geom_bar(aes(fill = category_name), alpha=0.7, binwidth = 90) +
+        #scale_fill_manual(values=blue_pallete) +
+        scale_x_date(date_breaks="3 months", date_labels="%Y-%m") +
+        theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 12),
+              axis.text.y = element_text(size = 12),
+              axis.title = element_text(size = 16),
+              legend.text = element_text(size = 12),
+              legend.title = element_text(size = 16),
+              plot.title = element_text(size = 20, hjust = 0.5)) +
+        labs(fill = "kategoria danych") +
+        xlab("data") +
+        ylab("liczba zapytań") +
+        scale_fill_manual(values=viri) +
+        ggtitle("Ilość danych w każdej kategorii w danym okresie")
+
+plot(p)
+
+```
+
+# Kategorie użytkowników
+
+Poniższe wykresy prezentują procentowy poszczególnych kategorii użytkowników we wszystkich pobieranych danych oraz ilość pobieranych danych (mierzony ilością zapytań) w poszczególnych okresach czasu 
+
+```{r, include = TRUE, message = F, echo = F}
+categories <- data.frame(table(all_data$user_category))
+cat_viri <- viri2[1:nrow(categories)]
+
+slices <- categories$Freq
+lbls <- categories$Var1
+pct <- round(slices/sum(slices)*100)
+lbls <- paste(lbls, pct) # add percents to labels
+lbls <- paste(lbls,"%",sep="") # ad % to labels 
+pie(slices, labels = lbls, main="Typy użytkowników najczęściej pobierających dane", col = cat_viri)
+
+```
+
+```{r, include = TRUE, message=F, warning = F, echo = F}
+p <- ggplot(all_data, aes(x = date)) +
+        geom_bar(aes(fill = user_category), alpha=0.7, binwidth = 90) +
+        scale_x_date(date_breaks="3 months", date_labels="%Y-%m") +
+        theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 12),
+              axis.text.y = element_text(size = 12),
+              axis.title = element_text(size = 16),
+              legend.text = element_text(size = 12),
+              legend.title = element_text(size = 16),
+              plot.title = element_text(size = 20, hjust = 0.5))+
+        labs(fill = "typ użytkowników") +
+        xlab("data") +
+        ylab("liczba zapytań") +
+        scale_fill_manual(values=viri) +
+        ggtitle("Ilość zapytań od użytkowników poszczególnych typów w danym okresie")
+
+plot(p)
+
+```
+
+# Statystyki
+
+## Top 10 zbiorów danych
+
+10 najcześciej pobieranych zbiorów danych w roku 2019
+
+```{r, include = TRUE, echo = F}
+all_data <- all_data %>%
+  dplyr::mutate(year = gsub("-.*", "", date)) %>%
+  dplyr::mutate(year = as.numeric(year))
+
+year_id <- 2019
+  year_data <- all_data[all_data$year == year_id, ]
+  year_title <- data.frame(table(year_data$title))
+  year_title <- dplyr::arrange(year_title, desc(Freq))
+  year_title$Var1 <- as.character(year_title$Var1)
+  year_title <- dplyr::inner_join(year_title, year_data[, c("title", "category_name")], by = c("Var1" = "title"))
+  year_title <- year_title[!duplicated(year_title), ]
+  year_title <- year_title[1:10, c(1, 3, 2)]
+  colnames(year_title) <- c("tytuł", "kategoria", "ilość pobrań")
+  row.names(year_title) <- NULL
+  
+  knitr::kable(year_title, caption = paste0("Rok ", year_id)) %>%
+   kable_styling(bootstrap_options = c("striped", "hover", "condensed"),
+                 position = "float_left")
+
+```
+
+## Top 10 użytkowników danych
+
+10 użytkowników generujących najwięcej zapytań w roku 2019
+
+```{r, include = TRUE, echo = F}
+all_data <- all_data %>%
+  dplyr::mutate(year = gsub("-.*", "", date)) %>%
+  dplyr::mutate(year = as.numeric(year))
+
+year_id <- 2019
+  year_data <- all_data[all_data$year == year_id, ]
+  year_title <- data.frame(table(year_data$title))
+  year_title <- dplyr::arrange(year_title, desc(Freq))
+  year_title$Var1 <- as.character(year_title$Var1)
+  year_title <- dplyr::inner_join(year_title, year_data[, c("title", "category_name")], by = c("Var1" = "title"))
+  year_title <- year_title[!duplicated(year_title), ]
+  year_title <- year_title[1:10, c(1, 3, 2)]
+  colnames(year_title) <- c("tytuł", "kategoria", "ilość pobrań")
+  row.names(year_title) <- NULL
+  
+  knitr::kable(year_title, caption = paste0("Rok ", year_id)) %>%
+   kable_styling(bootstrap_options = c("striped", "hover", "condensed"),
+                 position = "float_left")
+
+```
